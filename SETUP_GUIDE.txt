@@ -1,0 +1,45 @@
+Cyber Threat and Phishing Detection System
+
+Requirements
+- Python 3.10 or newer
+- pip
+
+Setup
+1. Create a virtual environment:
+   py -m venv venv
+
+2. Activate it in Command Prompt:
+   venv\Scripts\activate
+
+   Or in PowerShell:
+   .\venv\Scripts\Activate.ps1
+
+3. Install the dependencies:
+   pip install -r requirements.txt
+
+Run the app
+streamlit run app.py
+
+Then open the local URL shown by Streamlit, usually:
+http://localhost:8501
+
+Included files
+- app.py: Streamlit app
+- requirements.txt: Python dependencies
+- phishing_model.pkl: trained main model
+- light_phishing_model.pkl: trained lightweight model
+- phishing.csv: dataset
+- Training Dataset.arff: source dataset
+
+Optional retraining
+py train_model.py
+py train_light_model.py
+
+Dependencies in requirements.txt
+- streamlit
+- joblib
+- numpy
+- pandas
+- liac-arff
+- scikit-learn
+- xgboost

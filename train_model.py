@@ -29,6 +29,27 @@ model.fit(X_train, y_train)
 
 # Accuracy
 pred = model.predict(X_test)
+from sklearn.metrics import confusion_matrix
+import matplotlib.pyplot as plt
+
+cm = confusion_matrix(y_test, pred)
+
+print("Confusion Matrix:")
+print(cm)
+
+# Plot confusion matrix
+plt.figure()
+plt.imshow(cm)
+plt.title("Confusion Matrix")
+plt.xlabel("Predicted")
+plt.ylabel("Actual")
+
+# Add values inside matrix
+for i in range(len(cm)):
+    for j in range(len(cm[0])):
+        plt.text(j, i, cm[i][j], ha='center', va='center')
+
+plt.savefig("confusion_matrix.png")
 accuracy = accuracy_score(y_test, pred)
 
 print("Model Accuracy:", round(accuracy * 100, 2), "%")
