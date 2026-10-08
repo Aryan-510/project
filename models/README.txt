@@ -1,7 +1,5 @@
-Copy your existing model files from the original GitHub project into this folder:
+This folder contains the model assets used by the app:
 
-light_phishing_model.pkl
-phishing_model.pkl
-
-The backend realtime detector loads light_phishing_model.pkl.
-
+- light_phishing_model.pkl: realtime backend predictions
+- phishing_model.pkl: Model Evaluation page
+- phishing.csv: evaluation dataset
